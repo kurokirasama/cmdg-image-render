@@ -1,6 +1,6 @@
 //go:build !cgo
 
-package clib
+package render
 
 import (
 	"bytes"

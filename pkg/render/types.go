@@ -1,4 +1,4 @@
-package clib
+package render
 
 // ImageConvertResult holds the output of DecodeToPNG.
 type ImageConvertResult struct {

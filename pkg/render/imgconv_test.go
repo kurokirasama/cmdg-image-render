@@ -1,4 +1,4 @@
-package clib
+package render
 
 import (
 	"bytes"
