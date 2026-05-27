@@ -2,7 +2,7 @@
 
 A high-performance standalone HTML renderer designed for terminal applications. 
 
-This tool is the official rendering engine for the [cmdg](https://github.com/ThomasHabets/cmdg) GMail client. It extracts HTML into formatted plain text and identifies the precise terminal coordinates for inline images.
+This tool is a renderer for [cmdg](https://github.com/ThomasHabets/cmdg) that allows rendering of inline images. It extracts HTML into formatted plain text and identifies the precise terminal coordinates for inline images.
 
 ## Features
 - **High-Density HTML Rendering:** Converts complex HTML layouts into readable, properly spaced terminal text.
@@ -16,6 +16,15 @@ Requires Go 1.25+.
 ```bash
 go install github.com/kurokirasama/cmdg-image-render/cmd/cmdg-image-render@latest
 ```
+
+## Integration with cmdg
+To enable HTML rendering and inline images in [cmdg](https://github.com/ThomasHabets/cmdg):
+1. Install `cmdg-image-render` using the command above.
+2. Ensure the compiled binary is in your system's `PATH`.
+3. Run `cmdg` with the image protocol enabled:
+   ```bash
+   cmdg -image_protocol auto
+   ```
 
 ## Usage
 The tool reads raw HTML from `stdin` and outputs a JSON object to `stdout`.
